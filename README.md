@@ -1,16 +1,45 @@
-# mini_spotify_clone
+## 🎧 Mini Spotify Clone
 
-A new Flutter project.
+A minimal music player built with Flutter, inspired by the clean and simple Spotify experience. Includes basic audio playback, theme switching, and a soft Neumorphic UI design.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+### 🎵 Local MP3 audio playback
 
-A few resources to get you started if this is your first Flutter project:
+### 🌗 Light & Dark mode support
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🔊 Audio controls: Play / Pause, Next / Previous, Seek  
+💿 Neumorphic UI components  
+📦 State management with Provider
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- Flutter
+- Provider (state management)
+- audioplayers (audio playback)
+
+## 📂 Project Structure
+
+```
+lib/
+├── components/ # Neumorphic UI components
+├── models/ # Song model & PlaylistProvider
+├── screens/ # App screens
+└── themes/ # Light & Dark mode themes
+```
+
+## 🚀 Getting Started
+
+```
+flutter pub get
+flutter run
+```
+
+Add your audio files to `assets/audios/` and include assets in `pubspec.yaml`.
+
+## 📌 Roadmap
+
+- Animated transitions
+- Multiple playlists
+- Music visualizer
+- Streaming support
