@@ -1,0 +1,38 @@
+name: Build Release APK
+
+on:
+  push:
+    branches: [main, release]
+  # Для релизов по тегам: on: push: tags: [ 'v*' ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.3' # Укажи свою версию Flutter, или 'stable'
+          channel: 'stable'
+
+      - name: Get Flutter dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release --split-per-abi # --split-per-abi для отдельных APK по архитектурам (arm64, armeabi, x86_64)
+
+      - name: Upload APK artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk # Если split, то app-*-release.apk
+          retention-days: 30 # Хранить 30 дней
