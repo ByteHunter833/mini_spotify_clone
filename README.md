@@ -43,3 +43,17 @@ Add your audio files to `assets/audios/` and include assets in `pubspec.yaml`.
 - Multiple playlists
 - Music visualizer
 - Streaming support
+
+## 🖼️ Screenshots
+
+### Player
+
+| Light Mode – Player                                       | Dark Mode – Player                                      |
+| --------------------------------------------------------- | ------------------------------------------------------- |
+| ![Light Player](assets/screenshots/light_mode_player.png) | ![Dark Player](assets/screenshots/dark_mode_player.png) |
+
+### Playlist
+
+| Light Mode – Playlist                                         | Dark Mode – Playlist                                        |
+| ------------------------------------------------------------- | ----------------------------------------------------------- |
+| ![Light Playlist](assets/screenshots/light_mode_playlist.png) | ![Dark Playlist](assets/screenshots/dark_mode_playlist.png) |
